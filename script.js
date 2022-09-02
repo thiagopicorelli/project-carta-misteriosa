@@ -6,6 +6,7 @@ function gerarCarta() {
   console.log('test');
   let textoDividido = cartaTexto.value.split(' ');
 
+  cartaGerada.innerHTML = '';
   for(let i = 0; i < textoDividido.length; i += 1) {
     const span = document.createElement('span');
     span.innerHTML = textoDividido[i];

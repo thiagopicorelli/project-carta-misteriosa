@@ -1,6 +1,7 @@
 const cartaTexto = document.getElementById('carta-texto');
 const criarButton = document.getElementById('criar-carta');
 const cartaGerada = document.getElementById('carta-gerada');
+const contador = document.getElementById('carta-contador');
 
 const estilos = [
   ['newspaper', 'magazine1', 'magazine2'],
@@ -74,7 +75,7 @@ function gerarCarta() {
     cartaGerada.appendChild(span);
   }
 
-  gerarEstilo();
+  contador.innerHTML = textoDividido.length;
 }
 
 criarButton.addEventListener('click', gerarCarta);

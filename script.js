@@ -38,6 +38,26 @@ function gerarEstilo() {
   return classes.trim();
 }
 
+function gerarEstiloDiferente() {
+  let classes = '';
+
+  for (let i = 0; i < 4; i += 1) {
+    classes += estilos[i][Math.floor(Math.random() * estilos[i].length)] + ' ';
+  }
+
+  return classes;
+}
+
+function addEstiloDiferente(event) {
+  let classes;
+
+  do {
+    classes = gerarEstiloDiferente();
+  } while (classes === event.target.className);
+
+  event.target.className = classes;
+}
+
 function gerarCarta() {
   if(cartaTexto.value.trim().length === 0) {
     cartaGerada.innerHTML = 'Por favor, digite o conteúdo da carta.';
@@ -50,6 +70,7 @@ function gerarCarta() {
     const span = document.createElement('span');
     span.innerHTML = textoDividido[i];
     span.className = gerarEstilo();
+    span.addEventListener('click', addEstiloDiferente);
     cartaGerada.appendChild(span);
   }
 

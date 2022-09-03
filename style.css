@@ -1,3 +1,15 @@
+body {
+  text-align: center;
+  color: green;
+  background-color: black;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+input {
+  width: 95%;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, serif;

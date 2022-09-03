@@ -3,7 +3,7 @@ const criarButton = document.getElementById('criar-carta');
 const cartaGerada = document.getElementById('carta-gerada');
 
 const estilos = [
-  ['newspaper', 'magazine', 'magazine2'],
+  ['newspaper', 'magazine1', 'magazine2'],
   ['medium', 'big', 'reallybig'],
   ['rotateleft', 'rotateright'],
   ['skewleft', 'skewright'],
